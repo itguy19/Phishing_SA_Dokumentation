@@ -1,0 +1,33 @@
+show-today: false
+# Headers at the top of the gantt chart. Can include `year`, `month`,
+# `week`, or `day`
+headers:
+  - month
+  - week
+
+start: 2026-09-14
+end: 2026-12-18
+
+tasks:
+  - name: Studienarbeit
+    subtasks:
+      - name: Research (120h) 25%
+        start: 2026-09-14
+        end: 2026-12-18
+      - name: Administratives (60h) 5%
+        start: 2026-09-14
+        end: 2026-12-18
+      - name: Dokumentation (120h) 45%
+        start: 2026-09-14
+        end: 2026-12-18
+      - name: Technische-Umsetzung (40h) 25%
+        start: 2026-09-14
+        end: 2026-12-18
+
+milestones:
+  - name: "Beginn der Arbeit"
+    date: 2026-09-14
+    show-date: true
+  - name: "Abgabe der Studienarbeit"
+    date: 2026-12-18
+    show-date: true

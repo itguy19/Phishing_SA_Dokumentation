@@ -9,7 +9,7 @@
   co-advisor: doc-co-advisor,
   expert: doc-expert,
   thesis-type: doc-thesis-type,
-  lang: "en",
+  lang: "de",
 )
 
 // ─────────────────────────────────────────────
@@ -46,13 +46,13 @@
 #include "chapters/A_ProjectManagement.typ"
 #include "chapters/B_PersonalReflection.typ"
 
-= Figures
+= Diagramme
 #outline(title: none, target: figure.where(kind: image))
 
-= Tables
+= Tabellen
 #outline(title: none, target: figure.where(kind: table))
 
-= Listings
+= Listen
 #outline(title: none, target: figure.where(kind: raw))
 
 = Bibliography

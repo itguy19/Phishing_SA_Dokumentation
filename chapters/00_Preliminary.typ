@@ -1,5 +1,5 @@
 #align(center)[
-  #text(size: 14pt, smallcaps[Abstrakt])
+  #text(size: 14pt, smallcaps[Abstract])
 ]
 
 #v(1em)
