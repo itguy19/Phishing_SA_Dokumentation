@@ -1,6 +1,6 @@
-= Introduction
+= Einleitung
 
-== Background
+== Hintergrund
 
 #lorem(50) @sample-article
 
@@ -8,6 +8,10 @@
 
 #lorem(45)
 
-== Goals
+== Ziele
 
 #lorem(40)
+
+== Rahmenbedingungen
+Hier werden Angaben über die Art der Arbeit (Projekt-, Studien- oder Bachelorarbeit) sowie über das
+vorgesehene Zeitbudget und die ECTS-Credits Vergütung gemacht.

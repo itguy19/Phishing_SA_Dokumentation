@@ -2,7 +2,7 @@
 
 = Requirements
 
-== Functional Requirements
+== Funktionale Anforderungen
 
 #figure(
   caption: [Functional requirements.],
@@ -17,7 +17,7 @@
   ),
 )
 
-== Non-Functional Requirements
+== Nichtfunktionale Anforderungen
 
 #figure(
   caption: [Non-functional requirements.],

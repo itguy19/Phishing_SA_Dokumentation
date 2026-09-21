@@ -1,12 +1,15 @@
 = Implementation
 
-== Overview
+== Übersicht
 
-#lorem(45)
+Statistische Analysis
 
-== Example
+Dynamische Analysis
 
-#lorem(20)
+Live Analysis
+
+== Beispiel
+
 
 #figure(
   ```python

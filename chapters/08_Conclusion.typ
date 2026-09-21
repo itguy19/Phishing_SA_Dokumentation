@@ -1,9 +1,9 @@
-= Conclusion & Future Work
+= Schlussfolgerung & Ausblick
 
-== Conclusion
+== Schlussfolgerung
 
 #lorem(45)
 
-== Future Work
+== Ausblick
 
 #lorem(35)

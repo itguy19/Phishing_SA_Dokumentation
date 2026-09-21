@@ -11,17 +11,20 @@ end: 2026-12-18
 tasks:
   - name: Studienarbeit
     subtasks:
-      - name: Research (120h) 25%
+      - name: Research (60h) 25%
         start: 2026-09-14
         end: 2026-12-18
-      - name: Administratives (60h) 5%
+      - name: Administratives (12h) 5%
         start: 2026-09-14
         end: 2026-12-18
-      - name: Dokumentation (120h) 45%
+      - name: Dokumentation (96h) 40%
         start: 2026-09-14
         end: 2026-12-18
-      - name: Technische-Umsetzung (40h) 25%
+      - name: Technische-Umsetzung (60h) 25%
         start: 2026-09-14
+        end: 2026-12-18
+      - name: Präsentation (12h) 5%
+        start: 2026-12-01
         end: 2026-12-18
 
 milestones:
@@ -30,4 +33,13 @@ milestones:
     show-date: true
   - name: "Abgabe der Studienarbeit"
     date: 2026-12-18
+    show-date: true
+  - name: "Abgabe des Drafts"
+    date: 2026-11-30
+    show-date: true
+  - name: "Präsentation des Lösungskonzepts"
+    date: 2026-10-26
+    show-date: true
+  - name: "Abschluss der Analyse"
+    date: 2026-10-05
     show-date: true

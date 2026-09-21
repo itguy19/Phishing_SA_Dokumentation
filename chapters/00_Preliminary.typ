@@ -8,7 +8,7 @@
 
 #pagebreak()
 #align(center)[
-  #text(size: 14pt, smallcaps[Acknowledgements])
+  #text(size: 14pt, smallcaps[Danksagung])
 ]
 
 #v(1em)

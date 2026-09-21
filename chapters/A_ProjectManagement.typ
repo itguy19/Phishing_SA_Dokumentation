@@ -16,9 +16,16 @@ Für die Studienarbeit gilt die *\~240 Stunden* Arbeitszeit einzuplanen.
 #pagebreak()
 #set page(flipped: false)
 
-#lorem(30) You could use the `timeliney` or `gantty` package if you want to
-create a time table.
+== Vorgehen im Projekt
+(Prozess, Workflows, Meilensteine)
 
-== Difficulties
+== Qualitätssicherung
+(Test-Philosophie, Definition of Done, CI/CD-Pipelines, Reviews)
+
+== Risikoanalyse
+Risikoanalyse und Risikomanagementdokumente (sollten zu Projektbeginn erstellt und im Projekt
+fortlaufend aktualisiert werden)
+
+== Zeiterfassung
 
 #lorem(40)
