@@ -21,7 +21,7 @@ tasks:
         start: 2026-09-14
         end: 2026-12-18
       - name: Technische-Umsetzung (60h) 25%
-        start: 2026-09-14
+        start: 2026-10-05
         end: 2026-12-18
       - name: Präsentation (12h) 5%
         start: 2026-12-01

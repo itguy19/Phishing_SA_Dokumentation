@@ -35,7 +35,6 @@
 #include "chapters/04_Design.typ"
 #include "chapters/05_Implementation.typ"
 #include "chapters/06_QualityAssurance.typ"
-#include "chapters/07_Evaluation.typ"
 #include "chapters/08_Conclusion.typ"
 
 // ─────────────────────────────────────────────
@@ -56,6 +55,6 @@
 = Listen
 #outline(title: none, target: figure.where(kind: raw))
 
-= Bibliography
+= Literaturverzeichnis
 #bibliography("refs.yaml", title: none, style: "ieee")
 
