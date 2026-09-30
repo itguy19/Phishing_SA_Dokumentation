@@ -13,4 +13,4 @@
 #let doc-co-advisor = "avantguard cyber security AG"
 #let doc-expert = "Sandro Ackermann"
 
-#let doc-thesis-type = "Studienarbeit · Herbst 2026"
+#let doc-thesis-type = "Studienarbeit - Herbst 2026"
