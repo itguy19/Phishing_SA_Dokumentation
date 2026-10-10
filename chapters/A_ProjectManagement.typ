@@ -1,4 +1,5 @@
 #import "@preview/gantty:0.5.1": gantt
+#import "@preview/ost-ifs-thesis:1.0.0": styled-table
 
 #set page(flipped: true)
 
@@ -22,11 +23,61 @@ Für die Studienarbeit gilt die *\~240 Stunden* Arbeitszeit einzuplanen.
 == Qualitätssicherung
 (Test-Philosophie, Definition of Done, CI/CD-Pipelines, Reviews)
 
-== Risikoanalyse
-Risikoanalyse und Risikomanagementdokumente (sollten zu Projektbeginn erstellt und im Projekt
-fortlaufend aktualisiert werden)
+#pagebreak()
+== Risikomanagement
+
+=== Pre-Mitigation Risiken
+#figure(
+  image("/figures/risk_matrix_before_mitigation.svg"),
+  caption: [
+    Risikomatrix vor Risikomitigation
+  ],
+)
+
+#figure(
+  caption: [Risikotabelle],
+  styled-table(
+    columns: (auto, 1fr, auto),
+    header: ("Risiko-ID", "Risiko-Beschreibung", "Kategorie"),
+
+    [R-1], [Die Dokumentation entspricht den OST-Guidelines nicht.], [#align(center)[#circle(radius: 5pt, fill: rgb("#199827"))]],
+    [R-2], [Die Studienarbeit kann innerhalb des Zeitlimits nicht erfolgreich abgeschlossen werden.], [#align(center)[#circle(radius: 5pt, fill: rgb("f8f81e"))]],
+    [R-3], [Die Dokumentation wird während des Projekts nicht adäquat gepflegt.], [#align(center)[#circle(radius: 5pt, fill: rgb("#f8f81e"))]],
+    [R-4], [Scope Creeping (Umfangsausweitung) der Studienarbeit.], [#align(center)[#circle(radius: 5pt, fill: rgb("#f8f81e"))]],
+    [R-5], [Es ist nicht möglich, eine Phishing-Landing-Page zu bauen, die Sicherheitsscanner täuschen kann.], [#align(center)[#circle(radius: 5pt, fill: rgb("#fc1c19"))]],
+    [R-6], [Die Studienarbeit bietet keinen Mehrwert für avantguard.], [#align(center)[#circle(radius: 5pt, fill: rgb("#fc1c19"))]],
+    [R-7], [Beim Research werden keine erfolgreiche Anti-Analysis-Techniken gegen Sicherheitsscanner gefunden.], [#align(center)[#circle(radius: 5pt, fill: rgb("#fc1c19"))]],
+  ),
+)
+
+=== Post-Mitigation Risiken
+
+#figure(
+  caption: [Mitigationstabelle],
+  styled-table(
+    columns: (auto, auto, auto),
+    header: ("Risiko-ID", "Mitigations-Beschreibung", "Neue Kategorie"),
+
+    [R-1], [Am Anfang des Projekts soll eine Liste mit Anforderungen an die Dokumentation erstellt werden, die vor der Abgabe der Arbeit überprüft werden müssen. Die Liste soll durchgangen werden und wie eine Checkliste abgehakt werden.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-2], [Während der Arbeit soll nicht nur qualitativ, aber auch quantitativ 17 Stunden Arbeit in der Woche angestrebt werden. Dies sollte sicherstellen, dass aus dem Zeitbudget das bestmögliche Resultat rausgeholt wird.],[#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-3], [Von Anfang an sollte jede Woche mindestens drei Stunden lang dokumentiert werden. Diese Massnahme stellt sicher, dass die Dokumentation während des Projekts aktuell gehalten wird.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-4], [Am Anfang sollten mit Hilfe von Meetings detaillierte nicht-funktionale sowie funktionale Anforderungen erstellt werden. Diese müssen den Vorstellungen von avantguard entsprechen und ein machbares und realistisches Projekt sicherstellen.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-5], [Durch viel in Phishing-Research investierte Zeit sollte das Risiko minimiert werden, indem Strategien und Techniken gelernt werden.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-6], [Gegen Ende der Arbeit wird eine Präsentation im Büro von avantguard gehalten, um sicherzustellen, dass avantguard einen Überblick über die Arbeit verschaffen kann, ein Wissenstransfer stattfindet und avantguard eine Gelegenheit hat, Fragen bezüglich des Projekts zu stellen. Diese Präsentation soll den Mehrwert des Projekts für avantguard maximalisieren.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+    [R-7], [Ein Kurs von MaldevAcademy wird gekauft, um die benötigte Anti-Analysis-Techniken anzueignen.], [#align(center)[#circle(radius: 7pt, fill: rgb("#199827"))]],
+  ),
+)
+
+#figure(
+  image("/figures/risk_matrix_after_mitigation.svg"),
+  caption: [
+    Risikomatrix nach Risikomitigation
+  ],
+)
 
 == Zeiterfassung
+
+#pagebreak()
 
 == Meetings
 
@@ -41,6 +92,7 @@ fortlaufend aktualisiert werden)
   [3.], [], [], [], [],
 )
 
+#pagebreak()
 === Protokoll
 
 ==== Kick-off Meeting
@@ -105,7 +157,7 @@ fortlaufend aktualisiert werden)
   )
 ]
 
-
+#pagebreak()
 ==== Requirements-Engineering
 
 #let protocol-field(label, content) = {
