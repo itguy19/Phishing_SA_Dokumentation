@@ -1,16 +1,37 @@
 # yaml-language-server: $schema=https://raw.githubusercontent.com/mkdjr/hayagriva/main/hayagriva.schema.json
 
-sample-article:
+
+li-2024-phishing:
   type: article
-  title: "An Example Journal Article Used as a Placeholder Reference"
-  author: ["Author, First", "Author, Second"]
-  date: 2023
+  title: "A State-of-the-Art Review on Phishing Website Detection Techniques"
+  author:
+    - "Li, Wenhao"
+    - "Manickam, Selvakumar"
+    - "Chong, Yw"
+    - "Leng, Weilan"
+    - "Nanda, Priyadarsi"
+  date: 2024
   parent:
     type: periodical
-    title: "Journal of Example Studies"
+    title: "IEEE Access"
     volume: 12
+  page-range: "187976-188012"
+  serial-number:
+    doi: "10.1109/ACCESS.2024.3514972"
+
+tang-2021-phishing:
+  type: article
+  title: "A survey of machine learning-based solutions for phishing website detection"
+  author:
+    - "Tang, Lizhen"
+    - "Mahmoud, Qusay H."
+  date: 2021
+  page-range: "672-694"
+  parent:
+    type: periodical
+    title: "Machine Learning and Knowledge Extraction"
+    volume: 3
     issue: 3
-  page-range: "101-118"
 
 sample-book:
   type: book
