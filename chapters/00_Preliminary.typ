@@ -7,6 +7,8 @@
 
 #v(1em)
 
+
+Diese Arbeit 
 *B* Background information  
 
 *P* Purpose of study  

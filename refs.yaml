@@ -33,9 +33,50 @@ tang-2021-phishing:
     volume: 3
     issue: 3
 
-sample-book:
-  type: book
-  title: "An Example Book Title"
-  author: "Author, Third"
-  date: 2021
-  publisher: "Example Press"
+karrar-2025-assessing:
+  type: article
+  title: "Assessing the Efficacy of Security Awareness Training in Mitigating Phishing Attacks: A Review"
+  author:
+    - "Karrar, Abdelrahman Elsharif"
+  date: 2025
+  page-range: "177-184"
+  parent:
+    type: periodical
+    title: "International Journal of Advanced Trends in Computer Science and Engineering"
+    volume: 14
+    issue: 3
+
+ho-2025-understanding:
+  type: article
+  title: "Understanding the Efficacy of Phishing Training in Practice"
+  author:
+    - "Ho, Grant"
+    - "Mirian, Ariana"
+    - "Luo, Elisa"
+    - "Tong, Khang"
+    - "Lee, Euyhyun"
+    - "Liu, Lin"
+    - "Longhurst, Christopher A."
+    - "Dameff, Christian"
+    - "Savage, Stefan"
+    - "Voelker, Geoffrey M."
+  date: 2025
+  parent:
+    type: periodical
+    title: "IEEE Symposium on Security and Privacy (SP)"
+  
+alluqmani-2025-assessing:
+  type: article
+  title: "Assessing the Efficacy of Security Awareness Training in Mitigating Phishing Attacks: A Review"
+  author:
+    - "Alluqmani, Khulud"
+    - "Karrar, Abdelrahman Elsharif"
+    - "Alhaidari, Mashael"
+    - "Alharbi, Rawan"
+  date: 2025
+  page-range: "177-184"
+  parent:
+    type: periodical
+    title: "International Journal of Advanced Trends in Computer Science and Engineering"
+    volume: 14
+    issue: 3
