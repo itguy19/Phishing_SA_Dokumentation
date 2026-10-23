@@ -1,6 +1,6 @@
 #import "@preview/ost-ifs-thesis:1.0.0": styled-table
 
-= Requirements
+= Anforderungen
 
 MoSCow
 

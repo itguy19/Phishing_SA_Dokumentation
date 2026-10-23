@@ -80,3 +80,36 @@ alluqmani-2025-assessing:
     title: "International Journal of Advanced Trends in Computer Science and Engineering"
     volume: 14
     issue: 3
+
+
+maldev-academy-course-2026:
+  type: misc
+  title: "Offensive Phishing Operations course"
+  author:
+    - "mr.d0x"
+    - "NUL0x4C"
+    - "5pider"
+    - "l1near"
+    - "5mukx"
+    - "Shac0x"
+    - "Electroxero"
+    - "Pengrey"
+    - "Carlos Gomez Quintana"
+    - "Florian Neubauer"
+    - "0x1sis"
+    - "m4ul3r"
+    - "Kyle H"
+    - "Andrea Karol Ranieri"
+  date: 2026
+  url:
+    value: "https://maldevacademy.com/phishing-course"
+    date: "2026-10-23"
+
+mdn-webdriver:
+  type: misc
+  title: "WebDriver"
+  author:
+    - "Mozilla Contributors"
+  url:
+    value: "https://developer.mozilla.org/en-US/docs/Web/WebDriver"
+

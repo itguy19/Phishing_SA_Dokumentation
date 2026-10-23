@@ -2,14 +2,10 @@
 //  Document Metadata
 // ─────────────────────────────────────────────
 
-#let doc-title = "Analyse moderner \nErkennungsmechanismen für Phishing-Landing-Pages"
+#let doc-title = "
+Entwicklung einer \nPhishing-Landing-Page mit \nFokus auf die Umgehung automatisierter Sicherheitsscanner"
 #let doc-subtitle = ""
 
-// Titelideen:
-// Entwicklung eines scanner-resistenen Phishing-Landing-Pages
-// Konzeption und Entwicklung einer Phishing-Landing-Page zur Umgehung automatisierter Sicherheitsscanner
-// Entwicklung einer Phishing-Landing-Page mit Fokus auf Sicherheitsscanner-Resistenz
-// Entwicklung einer Phishing-Landing-Page mit Fokus auf die Umgehung automatisierter Sicherheitsscanner
 
 
 #let doc-authors = (

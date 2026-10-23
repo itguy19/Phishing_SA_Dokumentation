@@ -7,7 +7,7 @@ Um Phishing zu bekämpfen, wurden viele Strategien entwickelt; einerseits existi
 Solche technischen Sicherheitsmassnahmen sind effektiv. Doch genau wie bei Maschinen, muss auch das Fachpersonal eines Unternehmens gehärtet werden, indem es trainiert wird, Phishing-Webseiten zu erkennen.  Die Arbeit von Ho et al. @ho-2025-understanding diskutiert, wie _Security Awareness Trainings_ an sich gemäss empirischen Untersuchungen die Phishing-Awareness nicht zwangsläufig verbessern. Was bei diesem Problem hilft, ist ein praktisches, simulationsbasiertes _Security Awareness Training_, eine Phishing-Simulation. Wie die zentralen Ergebnisse von Alluqmani et al. @alluqmani-2025-assessing zeigen, verringert eine Phishing-Simulation die Anfälligkeit von Nutzern für Phishing-Webseiten signifikant.
 
 avantguard cyber security AG, der Praxispartner dieser Arbeit, bietet Phishing-Simulationen für ihre Kunden an.
-In letzter Zeit erkennen Sicherheitssysteme jedoch die Phishing-Landing-Pages des Praxispartners, was zu gekürzten Phishing-Simulations-Zeiten führt und die Effektivität der Simulationen senkt.
+In letzter Zeit erkennen Sicherheitssysteme jedoch die Phishing-Landing-Pages des Praxispartners, was zur gekürzten Verfügbarkeit der Simulationsumgebung führt und deren Effektivität senkt.
 
 Eine Phishing-Simulation läuft im Allgemeinen wie in @phishing-simulation-ablauf dargestellt ab:
 

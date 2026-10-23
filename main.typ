@@ -57,7 +57,6 @@
 
 = Literaturverzeichnis
 #bibliography("refs.yaml", title: none, style: "ieee")
-@li-2024-phishing
 
 = Maldev Academy
 #include "chapters/G_MaldevAcademy.typ"

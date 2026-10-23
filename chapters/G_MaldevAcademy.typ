@@ -118,3 +118,11 @@
     [110], [ConsentFix Attack],
   ),
 )
+
+#set page(flipped: true)
+#set align(center)
+
+#figure(
+  image("/assets/image.png"),
+  caption: [Abschlusszertifikat Maldev Academy],
+)
