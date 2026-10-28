@@ -18,11 +18,11 @@ Das Bestreben, eine schwer-erkennbare Landing-Page zu erstellen, ist keine leich
 Um eine hohe OPSEC zu erreichen, müssen verschiedene Sicherheitsmassnahmen und Strategien evaluiert und ausgewertet werden, um den Erfolg einer Phishing-Simulation zu maximieren. Im Grunde genommen können OPSEC-Sicherheitsmassnahmen für Phishing in zwei Kategorien eingeordnet werden:
 
 #figure(
-  image("/assets/1-bots-2-analysis.png"),
+  image("/assets/1-bots-2-analysis.png", width: 75%),
   caption: [
     Die zwei OPSEC-Kategorien
   ],
-) 
+)
 
 Zur *Bot-Abwehr* gehören Massnahmen, die die Effektivität von Bots senken sollten, indem sie erkannt werden und die tatsächliche Landing-Page nicht angezeigt wird. Bots, Crawler oder Sicherheitsscanner sollten nicht zur tatsächlichen Landing-Page gelangen, die Zielpersonen sehen, da damit die Wahrscheinlichkeit erhöhen würde, dass sie eine Webseite als verdächtig oder als Phishing markieren.
 
