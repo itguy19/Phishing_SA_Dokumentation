@@ -113,3 +113,12 @@ mdn-webdriver:
   url:
     value: "https://developer.mozilla.org/en-US/docs/Web/WebDriver"
 
+sprocketsecurity-gophish-evasion:
+  type: misc
+  title: "Never Had a Bad Day Phishing: How to Set Up GoPhish to Evade Security Controls"
+  author:
+    - "Sprocket Security"
+  url:
+    value: "https://web.archive.org/web/20260511184919/https://www.sprocketsecurity.com/blog/never-had-a-bad-day-phishing-how-to-set-up-gophish-to-evade-security-controls"
+    date: "2026-05-11"
+
