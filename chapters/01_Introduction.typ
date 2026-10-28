@@ -22,6 +22,12 @@ Eine Phishing-Simulation läuft im Allgemeinen wie in @phishing-simulation-ablau
 
 Ziel dieser Arbeit ist, eine Phishing-Landing-Page für avantguard cyber security AG zu entwickeln, welche gängige Sicherheitssysteme umgeht. Dadurch soll die Verfügbarkeit der Simulationsumgebung verlängert werden, damit das Personal der Kunden reibungslos von den positiven Lerneffekten der Phishing-Simulationen profitieren kann.
 
+== Begriffsdefinitionen
+
+Zielperson / Nutzer / Mitarbeiter / Benutzer
+Phishing-Landing-Page / Landing-Page / Phishing-Webseite
+Bots / Scanner / Sicherheitsscanner
+
 == Rahmenbedingungen
 
 Dies ist eine Studienarbeit in Informatik, die an der Ostschweizer Fachhochschule verfasst wird. Für die Arbeit sind 240 Stunden vorgesehen (\~17 Stunden pro Woche während des Semesters). Nach einem erfolgreichen Abschluss werden dem Studierenden 8 ECTS-Credits in der Kategorie "Studien- und Bachelorarbeit" angerechnet.
