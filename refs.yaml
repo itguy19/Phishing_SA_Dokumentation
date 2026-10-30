@@ -122,3 +122,12 @@ sprocketsecurity-gophish-evasion:
     value: "https://web.archive.org/web/20260511184919/https://www.sprocketsecurity.com/blog/never-had-a-bad-day-phishing-how-to-set-up-gophish-to-evade-security-controls"
     date: "2026-05-11"
 
+wikipedia-moscow-priorisierung:
+  type: misc
+  title: "MoSCoW-Priorisierung"
+  author:
+    - "Wikipedia contributors"
+  url:
+    value: "https://web.archive.org/web/20260820152351/https://de.wikipedia.org/wiki/MoSCoW-Priorisierung"
+    date: "2026-08-20"
+

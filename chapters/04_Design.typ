@@ -1,11 +1,30 @@
 #import "@preview/ost-ifs-thesis:1.0.0": styled-table
-
+#import "@preview/fletcher:0.5.8" as fletcher: diagram, node, edge, shapes.diamond
 
 = Design
 
 == Infrastruktur
 
-#lorem(50)
+#set align(center);
+
+
+#diagram(
+	node-stroke: 1pt,
+	node((0,0), [Zielperson mit validem Token], corner-radius: 5pt),
+	edge("-|>"),
+  node((1,0), [Security Researcher], corner-radius: 5pt),
+  edge("-|>"),
+	node((2,0), [Automatisierter Scanner], corner-radius: 5pt),
+	edge("-|>"),
+	node((1,1), align(center)[
+		Reverse-Proxy
+	], shape: diamond, height: 15),
+)
+
+
+#set align(left)
+
+
 
 == Phishing-Landing-Page
 
