@@ -123,6 +123,6 @@
 #set align(center)
 
 #figure(
-  image("/assets/image.png"),
+  image("/assets/maldev-academy-certificate.png"),
   caption: [Abschlusszertifikat Maldev Academy],
 )

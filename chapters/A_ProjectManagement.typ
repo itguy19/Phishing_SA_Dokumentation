@@ -28,7 +28,7 @@ Für die Studienarbeit gilt die *\~240 Stunden* Arbeitszeit einzuplanen.
 
 === Pre-Mitigation Risiken
 #figure(
-  image("/figures/risk_matrix_before_mitigation.svg"),
+  image("/figures/risk_matrix_before_mitigation.png"),
   caption: [
     Risikomatrix vor Risikomitigation
   ],
@@ -69,7 +69,7 @@ Für die Studienarbeit gilt die *\~240 Stunden* Arbeitszeit einzuplanen.
 )
 
 #figure(
-  image("/figures/risk_matrix_after_mitigation.svg"),
+  image("/figures/risk_matrix_after_mitigation.png"),
   caption: [
     Risikomatrix nach Risikomitigation
   ],
