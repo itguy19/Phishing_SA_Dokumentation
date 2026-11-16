@@ -237,7 +237,7 @@
         <mxCell id="dmFmFNFPYDl65Ts9sXOu-15" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;G&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
           <mxGeometry x="1199.9983333333334" y="1158.75" width="22.5" height="22.5" as="geometry" />
         </mxCell>
-        <mxCell id="dmFmFNFPYDl65Ts9sXOu-16" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;GoPhish-Server&lt;br&gt;203.0.113.5&lt;/font&gt;&lt;div&gt;&lt;br style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;/div&gt;" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.servers.fileserver;" vertex="1" parent="1">
+        <mxCell id="dmFmFNFPYDl65Ts9sXOu-16" value="&lt;font face=&quot;Comic Sans MS&quot;&gt;GoPhish-Server&lt;br&gt;login.fakemicrosoft.com&lt;/font&gt;&lt;div&gt;&lt;br style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&lt;/div&gt;" style="strokeColor=#ffffff;sketch=0;html=1;pointerEvents=1;dashed=0;fillColor=#036897;strokeWidth=2;verticalLabelPosition=bottom;verticalAlign=top;align=center;outlineConnect=0;shape=mxgraph.cisco.servers.fileserver;" vertex="1" parent="1">
           <mxGeometry x="1144.4" y="1134" width="41.20833333333334" height="62" as="geometry" />
         </mxCell>
         <mxCell id="dmFmFNFPYDl65Ts9sXOu-21" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="dmFmFNFPYDl65Ts9sXOu-16" target="dmFmFNFPYDl65Ts9sXOu-24">

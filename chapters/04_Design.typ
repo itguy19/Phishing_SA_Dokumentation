@@ -5,16 +5,6 @@
 
 == Infrastruktur
 
-=== Technologien
-
-GoPhish
-
-Azure
-
-Cloudflare Workers
-
-Ansible
-
 #pagebreak()
 
 === Konzeption
@@ -34,7 +24,9 @@ Mit diesem einzelnen Server `G` können auch bei mehreren Firmen paralell eine S
 
 Dieses minimale Setup weist jedoch grundsätzliche Limitationen und Probleme auf. Falls Zielperson `A` die Landing-Page als ein Phishing-Versuch erkennt und den entsprechenden Kanälen diese auch meldet, lernen daraus eine Überfülle von Sicherheitsscanner schnell, dass dieser Server und deren IP-Adresse als Phishing eingestuft werden soll. Das ist ein Problem, da der GoPhish-Server mit deren Datenbank jetzt neu aufgesetzt werden muss, damit die verschiedenen Pentester ihre Kontos und Projekte auch auf der neuen Instanz einsehen können. Ohne diese Neuaufsetzung des Servers werden zukünftige Phishing-Simulationen funktionunfähig, da Sicherheitsscanner den Server schon kennen. Für die Erkennung des Phishing-Servers ist die Meldung einer Zielperson nicht mal erforderlich. Allein Crawler und Bots können die Phishing-Landing-Page entdecken und melden -- das reicht. Dank den vorher aufgelisteten Tatsachen und der beschriebenen Infrastruktur konnten wir somit etablieren, dass dieser einfache Ansatz für in einer Produktion laufenden Phishing-Simulation nicht ausreichend ist. Wir benötigen eine fortgeschrittene Infrastruktur.
 
-Für diese Arbeit wird die in @fortgeschrittene-infrastruktur gezeigte Infrastruktur eingesetzt. Verglichen mit der einfachen Infrastruktur von vorher, agieren hier Reverse-Proxies als Middle-Man zwischen den Zielpersonen und dem tatsächlichen produktiven GoPhish-Server `G`, sodass die Zielpersonen keinen direkten Kontakt mit Server `G` haben. Dieses Setup geniesst den Vorteil, dass bei einer allfälligen Erkennung der Phishing-Landing-Page nur die Proxy blockiert wird und nicht der dahinter stehende GoPhish-Server `G`. Bei diesem Setup wird pro Kunde eine Reverse-Proxy mit einem einem Domain und SSL-Zertifikat erstellt, welche den Verkehr dem GoPhish-Server weiterleiten. Diese Strategie dient dazu, dass die Infrastruktur projektübergreifend kein Single Point of Failure (SPF) hat, indem eine Reverse-Proxy den Verkehr von allen Kunden weiterleitet. Falls die Reverse-Proxy `R1` als Phishing oder bösartig von Systemen eingestuft wird, wird der Domain und die Reverse-Proxy von Firma `A` verbrannt, kann die Phishing-Simulation von Firma `B` jedoch ohne einfliessende Effekte weiterlaufen.
+Für diese Arbeit wird die in @fortgeschrittene-infrastruktur gezeigte Infrastruktur eingesetzt. Verglichen mit der einfachen Infrastruktur von vorher, agieren hier Reverse-Proxies als Middle-Man zwischen den Zielpersonen und dem tatsächlichen produktiven GoPhish-Server `G`, sodass die Zielpersonen keinen direkten Kontakt mit Server `G` haben. Dieses Setup geniesst den Vorteil, dass bei einer allfälligen Erkennung der Phishing-Landing-Page nur die Proxy blockiert wird und nicht der dahinter stehende GoPhish-Server `G`. 
+
+Bei diesem Setup wird pro Kunde eine Reverse-Proxy mit einem einem Domain und SSL-Zertifikat erstellt, welche den Verkehr dem GoPhish-Server weiterleiten. Diese Strategie dient dazu, dass die Infrastruktur projektübergreifend kein Single Point of Failure (SPF) hat, indem eine Reverse-Proxy den Verkehr von allen Kunden weiterleitet. Falls die Reverse-Proxy `R1` als Phishing oder bösartig von Systemen eingestuft wird, wird der Domain und die Reverse-Proxy von Firma `A` verbrannt, kann die Phishing-Simulation von Firma `B` jedoch ohne einfliessende Effekte weiterlaufen.
 
 #figure(
   image("/assets/phishing-infrastruktur-bild.png"),
@@ -43,9 +35,7 @@ Für diese Arbeit wird die in @fortgeschrittene-infrastruktur gezeigte Infrastru
   ],
 ) <fortgeschrittene-infrastruktur>
 
-
-
-=== Aufteilung der Verantwortungsbereichen
+#pagebreak()
 
 === GoPhish-Härtung
 
