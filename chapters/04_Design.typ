@@ -33,9 +33,36 @@ Bei diesem Setup wird pro Kunde ein Reverse-Proxy mit einer Domain und SSL-Zerti
   ],
 ) <fortgeschrittene-infrastruktur>
 
+
+=== Kurzfristige Infrastruktur: Reverse-Proxy
+
+
 #pagebreak()
 
-=== Kategorien von Operational Security Massnahmen
+=== Langfristige Infrastruktur: GoPhish
+
+GoPhish ist ein extrem verbreitetes Phishing-Framework, das von vielen Penetration-Testing-Teams weltweit eingesetzt wird. Dank der Popularität erwarten jedoch Blue-Teams die typische Signaturen von einer GoPhish-Phishing-Simulation und können somit die Phishing-Landing-Pages erkennen und entsprechend reagieren @coffsec-enterprise-email-security-gophish.
+
+Um den Erfolg der Simulation zu gewährleisten und um eine allfällige Detektion von diesen Signaturen zu vermeiden, wird bei der Aufsetzung der Phishing-Infrastruktur GoPhish gehärtet und teils umkonfiguriert. Dazu wird ein Skript von GitHub (https://github.com/0xqrx/gophish_customization) verwendet, welches auf einem Blogbeitrag von Sprocket Security @sprocketsecurity-gophish-evasion basiert ist und die folgenden Teile im Source-Code verändert:
+
+
+#figure(
+  caption: [],
+  styled-table(
+    columns: (4.3cm, 1fr),
+    header: ("Name", "Beschreibung"),
+
+    [RID Länge], [Steht für "Recipient ID". Dieser Wert wird pro Zielperson generiert, damit GoPhish individuell diese tracken kann. Standardmässig ist die Länge dieses Wertes 7 und ist ein alfanumerischer String. Bei dieser Arbeit wird die Länge auf 14 hochgeschraubt.],
+    [Empfänger-Parameter], [Dieser Parameter heisst standardmässig `rid`. Dieser Parameter gehört zu dem Phishing-Link, der an einer Zielperson geschickt wird und sieht folgendermassen aus: `https://x.y/?rid=s81k081`. `rid` ist ein eindeutiges Zeichen für GoPhish und wird wegen dem zu `openaccess` umbenannt.],
+    [Kontakt-Header], [Der Kontakt-Header in einem von GoPhish gesendeten E-Mails heisst standardmässig `X-Gophish-Contact`. Dieser Name wird zu `X-Secure-Contact` umbenannt.],
+    [Signatur-Header], [Ähnlich wie beim Kontakt-Header wird der Header `X-Signature-Header` auch umbenannt zu `X-Access-Token`],
+  ),
+)
+
+
+#pagebreak()
+
+== Kategorien von Operational Security Massnahmen
 
 Das Bestreben, eine robuste Phishing-Simulatino zu erstellen, ist keine leichte Aufgabe. Das Internet ist voller Bots, Crawler und Security-Scanner, die neu freigeschaltete Domains so schnell wie möglich durchforsten. Damit die in dieser Arbeit gebaute Landing-Page möglichst lange aushält und nicht verbrannt wird -- d.h. nicht von Sicherheitsdiensten erkannt wird --, muss die Operational Security (OPSEC) der Phishing-Simulation gescheit aufgebaut werden.
 
@@ -86,7 +113,7 @@ Komplexität der Implementation: #text(rgb("#0a7900"))[Niedrig], #text(rgb("#d39
 
 #pagebreak()
 
-=== Analyseerschwerung
+=== Strategien der Analyseerschwerung
 
 #figure(
   caption: [Liste von Analyseerschwerenden Massnahmen.],
@@ -128,35 +155,6 @@ In @verteidigung-in-der-tiefe ist das Leben einer HTTPS-Anfrage ersichtlich. Zue
 
 Mit dieser Strategie wird eine möglichst hohe OPSEC für die Phishing-Simulationen sichergestellt. In  @implementation werden die Details der konkreten Umsetzung behandelt. 
 
-=== Kurzfristige Infrastruktur
-
-==== Verhalten
-
-
-
-
-#pagebreak()
-
-=== Langfristige Infrastruktur: GoPhish-Härtung
-
-GoPhish ist ein extrem verbreitetes Phishing-Framework, das von vielen Penetration-Testing-Teams weltweit eingesetzt wird. Dank der Popularität erwarten jedoch Blue-Teams die typische Signaturen von einer GoPhish-Phishing-Simulation und können somit die Phishing-Landing-Pages erkennen und entsprechend reagieren @coffsec-enterprise-email-security-gophish.
-
-Um den Erfolg der Simulation zu gewährleisten und um eine allfällige Detektion von diesen Signaturen zu vermeiden, wird bei der Aufsetzung der Phishing-Infrastruktur GoPhish gehärtet und teils umkonfiguriert. Dazu wird ein Skript von GitHub (https://github.com/0xqrx/gophish_customization) verwendet, welches auf einem Blogbeitrag von Sprocket Security @sprocketsecurity-gophish-evasion basiert ist und die folgenden Teile im Source-Code verändert:
-
-
-#figure(
-  caption: [],
-  styled-table(
-    columns: (4.3cm, 1fr),
-    header: ("Name", "Beschreibung"),
-
-    [RID Länge], [Steht für "Recipient ID". Dieser Wert wird pro Zielperson generiert, damit GoPhish individuell diese tracken kann. Standardmässig ist die Länge dieses Wertes 7 und ist ein alfanumerischer String. Bei dieser Arbeit wird die Länge auf 14 hochgeschraubt.],
-    [Empfänger-Parameter], [Dieser Parameter heisst standardmässig `rid`. Dieser Parameter gehört zu dem Phishing-Link, der an einer Zielperson geschickt wird und sieht folgendermassen aus: `https://x.y/?rid=s81k081`. `rid` ist ein eindeutiges Zeichen für GoPhish und wird wegen dem zu `openaccess` umbenannt.],
-    [Kontakt-Header], [Der Kontakt-Header in einem von GoPhish gesendeten E-Mails heisst standardmässig `X-Gophish-Contact`. Dieser Name wird zu `X-Secure-Contact` umbenannt.],
-    [Signatur-Header], [Ähnlich wie beim Kontakt-Header wird der Header `X-Signature-Header` auch umbenannt zu `X-Access-Token`],
-  ),
-)
-
 
 #set align(center);
 /*
@@ -179,15 +177,13 @@ Um den Erfolg der Simulation zu gewährleisten und um eine allfällige Detektion
 
 #pagebreak()
 
-== Phishing-Landing-Page
+== Design der Phishing-Landing-Page
 
-=== Design
-
-Die Phishing-Landing-Page ist der zentrale Komponente einer Phishing-Kampagne, weswegen es eine äusserste Priorität ist, diese adäquat zu designen. Da in dieser Arbeit Microsoft nachgeahmt wird, muss die Microsoft-Login-Seite als Inspiration genommen werden. Dabei ist es wichtig zu beachten, dass aus Signatur-Gründen die Microsoft-Login-Seite nicht einfach geklont und gehostet werden darf. Ansonsten werden Sicherheitscanner die Phishing-Landing-Page dieser Arbeit blitzschnell anhand der Signaturen erkennen können.
+Die Phishing-Landing-Page ist die zentrale Komponente einer Phishing-Simulation, weswegen es die oberste Priorität ist, diese adäquat zu designen. Da in dieser Arbeit Microsoft nachgeahmt wird, muss die Microsoft-Login-Seite als Inspiration genommen werden. Dabei ist es wichtig zu beachten, dass aus signaturtechnischen Gründen die Microsoft-Login-Seite nicht einfach geklont und gehostet werden darf. Ansonsten werden Sicherheitsscanner die Phishing-Landing-Page dieser Arbeit blitzschnell anhand der Signaturen erkennen können.
 
 Ein Microsoft-Login erfolgt in genau zwei Schritten: Die Eingabe der E-Mail-Adresse in @schritt-1-microsoft-login und die Eingabe des Passworts in @schritt-2-microsoft-login. 
 
-In @schritt-1-microsoft-login werden zwei weisse Karten vertikal vor einem spannend stilisierten Hintergrundbild angezeigt. Auf der ersten Karte steht ein leeres Feld für die E-Mail-Adresse des Benutzers, darunter andere Optionen wie "No account? Creation one!" oder "Can't access your account?". Diese Texte sind so spezifisch für Microsoft, dass sie für die Phishing-Landing-Page geändert werden müssen. Auf der zweiten Karte unten steht ein Schlüssel mit dem Text "Sign-in options" als eine Möglichkeit.
+In @schritt-1-microsoft-login werden zwei weisse Karten vertikal vor einem abstrakt stilisierten Hintergrundbild angezeigt. Auf der ersten Karte steht ein leeres Feld für die E-Mail-Adresse des Benutzers, darunter andere Optionen wie "No account? Create one!" oder "Can't access your account?". Diese Texte sind so spezifisch für Microsoft, dass sie für die Phishing-Landing-Page geändert werden müssen. Auf der zweiten Karte unten steht ein Schlüssel mit dem Text "Sign-in options" als eine der Anmeldeoptionen.
 
 #figure(
   image("/assets/schritt-1-microsoft-login.png", width: 100%),
@@ -196,7 +192,7 @@ In @schritt-1-microsoft-login werden zwei weisse Karten vertikal vor einem spann
   ],
 ) <schritt-1-microsoft-login>
 
-Beim Schritt zwei wird der Benutzer aufgeboten, das zur E-Mail-Adresse gehörende Passwort einzugeben. Hierbei wird nur eine einzige Karte mit der vorher eingegebenen E-Mail-Adresse in einer abgerundeten Box, ein leerest Passwortfeld und der Text "Other ways to sign in" angezeigt.
+Beim Schritt zwei wird der Benutzer aufgefordert, das zur E-Mail-Adresse gehörende Passwort einzugeben. Hierbei wird nur eine einzige Karte angezeigt, die die vorher eingegebene E-Mail-Adresse in einer abgerundeten Box, ein leeres Passwortfeld sowie den Text "Other ways to sign in" enthält.
 
 #figure(
   image("/assets/schritt-2-microsoft-login.png", width: 100%),
@@ -205,8 +201,8 @@ Beim Schritt zwei wird der Benutzer aufgeboten, das zur E-Mail-Adresse gehörend
   ],
 ) <schritt-2-microsoft-login>
 
-Bei beiden Abbildungen gibt es Knöpfe, die zur Navigation dienen: Entweder "Back", "Next" oder ein links-zeigender Pfeil.
+Bei beiden Abbildungen gibt es Knöpfe, die zur Navigation dienen: Entweder "Back", "Next" oder ein linkszeigender Pfeil.
 
-Ziel ist es, Basierend auf @schritt-1-microsoft-login und @schritt-2-microsoft-login eine sehr ähnliche, aber trotzdem leicht unterschiedliche Phishing-Landing-Page zu erstellen, die Fähig ist, Sicherheitsscanner zu täuschen. Die typische visuelle sowie textbasierte Signaturen sollten somit umgangen werden, wobei der standardmässige Benutzer auf dem ersten Blick diese Unterschiede nicht erkennen sollte. Das Entwicklungs-Motto der Landing-Page lautet somit: *"Ähnlich, jedoch nicht identisch."*
+Ziel ist es, basierend auf @schritt-1-microsoft-login und @schritt-2-microsoft-login eine sehr ähnliche, aber trotzdem leicht unterschiedliche Phishing-Landing-Page zu erstellen, die fähig ist, Sicherheitsscanner zu täuschen. Die typischen visuellen sowie textbasierten Signaturen sollten somit umgangen werden, wobei der durchschnittliche Benutzer auf den ersten Blick diese Unterschiede nicht erkennen sollte. Das Entwicklungs-Motto der Landing-Page lautet somit: *"Ähnlich, jedoch nicht identisch."*
 
 #pagebreak()
