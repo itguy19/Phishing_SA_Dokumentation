@@ -17,3 +17,4 @@ Entwicklung einer \nPhishing-Landing-Page mit \nFokus auf die Umgehung automatis
 #let doc-expert = "Sandro Ackermann"
 
 #let doc-thesis-type = "Studienarbeit - Herbst 2026"
+

@@ -69,7 +69,7 @@ Das Bestreben, eine robuste Phishing-Simulatino zu erstellen, ist keine leichte 
 Um eine hohe OPSEC zu erreichen, müssen verschiedene Sicherheitsmassnahmen und Strategien evaluiert und ausgewertet werden, um den Erfolg einer Phishing-Simulation zu maximieren. Im Grunde genommen können OPSEC-Sicherheitsmassnahmen für Phishing in zwei Kategorien eingeordnet werden:
 
 #figure(
-  image("/assets/1-bots-2-analysis.png", width: 60%),
+  image("/assets/1-bots-2-analysis.png", width: 59%),
   caption: [
     Die zwei OPSEC-Kategorien
   ],
@@ -155,22 +155,62 @@ In @verteidigung-in-der-tiefe ist das Leben einer HTTPS-Anfrage ersichtlich. Zue
 
 Mit dieser Strategie wird eine möglichst hohe OPSEC für die Phishing-Simulationen sichergestellt. In  @implementation werden die Details der konkreten Umsetzung behandelt. 
 
+=== hello
 
 #set align(center);
-/*
-#diagram(
-	node-stroke: 1pt,
-	node((0,0), [Zielperson mit validem Token], corner-radius: 5pt),
-	edge("-|>"),
-  node((1,0), [Security Researcher], corner-radius: 5pt),
-  edge("-|>"),
-	node((2,0), [Automatisierter Scanner], corner-radius: 5pt),
-	edge("-|>"),
-	node((1,1), align(center)[
-		Reverse-Proxy
-	], shape: diamond, height: 15),
+
+
+#figure(
+diagram(
+  node-stroke: 1pt,
+  spacing: (4em, 3em),
+
+  // Ebene 0: die vier Anfragequellen
+  node((0,0), [Zielperson], corner-radius: 5pt, fill: rgb("#c0e3cf")),
+  node((1,0), [Security Researcher], corner-radius: 5pt, fill: red.lighten(70%)),
+  node((2,0), [Bots/Scanner], corner-radius: 5pt, fill: red.lighten(70%)),
+  node((3,0), [Sandbox-Umgebung], corner-radius: 5pt, fill: red.lighten(70%)),
+
+  // Ebene 1: Cloudflare Worker
+  node((1.5,1), [L1 (Reverse-Proxy)], corner-radius: 5pt, fill: rgb("#c0e3cf")),
+  edge((0,0), (1.5,1), "-|>", stroke: rgb("#207243")),
+  edge((1,0), (1.5,1), "-|>", stroke: red),
+  edge((2,0), (1.5,1), "-|>", stroke: red),
+  edge((3,0), (1.5,1), "-|>", stroke: red),
+
+  // Ebene 2: Entscheidungs-Raute
+  node((1.5,2), [L2 (Reverse-Proxy)], corner-radius: 5pt, fill: rgb("#c0e3cf")),
+  edge((1.5,1), (1.5,2), "-|>", stroke: rgb("#207243")),
+  node((3,2), [Block], corner-radius: 5pt, fill: red.lighten(70%)),
+  edge((1.5,1), (3,2), "-|>", stroke: red),
+
+  // Ebene 3: die vier Ausgänge
+  node((0,4), [L3 (GoPhish-Server)], corner-radius: 5pt, fill: rgb("#c0e3cf")),
+  node((1,4), [Fake-Wartungsseite], corner-radius: 5pt, fill: red.lighten(70%)),
+  node((2,4), [Fehlerseite], corner-radius: 5pt, fill: red.lighten(70%)),
+  node((3,4), [Geoblock], corner-radius: 5pt, fill: red.lighten(70%)),
+
+  edge((1.5,2), (-0.3,3.9), "-|>", stroke: rgb("#207243")),
+  edge((1.5,2), (1,4), "-|>", stroke: red),
+  edge((1.5,2), (2,4), "-|>", stroke: red),
+  edge((1.5,2), (3,4), "-|>", stroke: red),
+
+  node((2.6,1.3), [Einfache Bots/Scanner], stroke: none, fill: none),
+  node((0.3,2.8), [Legitime Zielperson], stroke: none, fill: none),
+  node((0.9,3.2), [Security-Analyst], stroke: none, fill: none),
+  node((2.1,3.3), [Bots/Scanner], stroke: none, fill: none),
+  node((2.6,3), [Falsches Land], stroke: none, fill: none),
+
+  // Ebene 4: 
+  node((0,5), [Landing-Page], corner-radius: 5pt, fill: rgb("#c0e3cf")),
+  node((1,5), [Microsoft-Login], corner-radius: 5pt, fill: red.lighten(70%)),
+  edge((0,4), (0,5), "-|>", stroke: rgb("#207243")),
+  edge((0,4), (1,5), "-|>", stroke: red),
+),
+caption: [
+    Zugriffspfad einer legitimen Zielperson.
+  ],
 )
-*/
 
 #set align(left)
 

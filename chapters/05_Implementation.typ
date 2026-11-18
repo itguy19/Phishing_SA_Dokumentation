@@ -16,7 +16,7 @@ Ein Open-Source-Tool für IT-Automatisierung. Dieses Tool wird mit dem Ziel eing
 
 === Cloudflare
 
-Ein digitaler "Türsteher" für Webseiten. Anstatt einen Server direkt ins Internet zu stellen, kann Cloudflares weltweites Netzwerk vor einer Webseite dazwischen geschaltet werden. Für diese Arbeit werden zwei Cloudflare-Technologien verwendet: Workers und Tunneling. Cloudflare Workers agieren als der Eintrittspunkt ins Cloudflare-Netzwerk und können kleine Programme ausführen, um den Internet-Verkehr zu analysieren, und den Verkehr weiterzuleiten. Der Cloudflare-Tunnel ist für die Verbindung zwischen dem Worker und dem GoPhish-Server verantwortlich.
+Ein _Content Delivery Network (CDN)_ für Webseiten. Anstatt einen Server direkt ins Internet zu stellen, kann Cloudflares weltweites Netzwerk vor einer Webseite dazwischen geschaltet werden. Für diese Arbeit werden zwei Cloudflare-Technologien verwendet: Workers und Tunneling. Cloudflare Workers agieren als der Eintrittspunkt ins Cloudflare-Netzwerk und können kleine Programme ausführen, um den Internet-Verkehr zu analysieren, und den Verkehr weiterzuleiten. Der Cloudflare-Tunnel ist für die Verbindung zwischen dem Worker und dem GoPhish-Server verantwortlich.
 
 == Überblick des Projekts
 
@@ -26,15 +26,6 @@ Ein digitaler "Türsteher" für Webseiten. Anstatt einen Server direkt ins Inter
 
 === Einrichtung des GoPhish-Servers
 
-
-
-=== Experimente
-
-
-==== Statistische und dynamische Analyse
-
-
-==== Live-Analyse
 
 
 == Beispiel
